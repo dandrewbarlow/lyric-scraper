@@ -133,9 +133,13 @@ def main():
 
     filenames = os.listdir("./results/")
 
+    print( filenames )
+
     file = open(outFile, "w")
 
     for filename in filenames:
+        filename = "./results/" + filename
+        
         if os.path.isfile(filename):
             artistFile = open(filename, "r")
             file.write( artistFile.read() )
